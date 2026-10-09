@@ -34,6 +34,8 @@ Place both files in `ComfyUI/models/hunyuanocr/`:
 huggingface-cli download ggml-org/HunyuanOCR-GGUF HunyuanOCR-Q8_0.gguf mmproj-HunyuanOCR-Q8_0.gguf --local-dir ComfyUI/models/hunyuanocr
 ```
 
+Alternative GGUF repository: [prithivMLmods/HunyuanOCR-1.5-GGUF-Updated](https://huggingface.co/prithivMLmods/HunyuanOCR-1.5-GGUF-Updated/tree/main)
+
 `HunyuanOCR-bf16.gguf` + `mmproj-HunyuanOCR-bf16.gguf` is the higher quality, larger pair.
 The text model and the projector must be the same quantization.
 
@@ -48,6 +50,4 @@ The `prompt` field takes any instruction. Useful defaults:
 | --- | --- |
 | `Describe this image in detail.` | General caption |
 | `OCR` | Raw text extraction |
-| `提取文档图片中正文的所有信息用markdown格式表示，其中页眉、页脚部分忽略，表格用html格式表达，文档中公式用latex格式表示，按照阅读顺序组织进行解析。` | Document parsing to markdown |
-
-Official temperature is `0.0` with `repeat_penalty` `1.08`, which are the defaults here.
+| `提取文档图片中正文的所有信息用markdown格式表示，其中页眉、页脚部分忽略，表格用html格式表达，文档中公式用latex格式表示，按照阅读顺序组织进[...]
